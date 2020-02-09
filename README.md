@@ -1,12 +1,12 @@
-# Title
+# JavaEE/JSP- Law Office
 
-JavaEE/JSP- Law Office
 
 ## Built With
 
 * [JavaEE](https://www.oracle.com/java/technologies/java-ee-glance.html) - Framework
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [Hibernate](https://hibernate.org/) - User as JPA provider
+* [Hibernate](https://hibernate.org/) - Persistence provider
+* [mySql](https://www.mysql.com/) - Database
 
 ## What its all about
 
