@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link" href="addCourtSession">Add</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="searchByDate">Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="upload">Upload</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="findFiles">Find Files</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,112 @@
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         metadata-complete="true">
+
+    <display-name>welcome</display-name>
+    <welcome-file-list>
+        <welcome-file>/**</welcome-file>
+    </welcome-file-list>
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>Servlets.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/addCourtSession</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>Servlets.UploadServlet</servlet-class>
+        <init-param>
+            <param-name>fileLocation</param-name>
+            <param-value>src/main/webapp/UploadedFiles/</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchByDate</servlet-name>
+        <servlet-class>Servlets.SearchByDateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchByDate</servlet-name>
+        <url-pattern>/searchByDate</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>Servlets.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PopulateDb</servlet-name>
+        <servlet-class>Utility.PopulateDb</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PopulateDb</servlet-name>
+        <url-pattern>/populateDb</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FindFilesServlet</servlet-name>
+        <servlet-class>Servlets.FindFilesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindFilesServlet</servlet-name>
+        <url-pattern>/findFiles</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>MainFilter</filter-name>
+        <filter-class>Filters.MainFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>MainFilter</filter-name>
+        <url-pattern>/addCourtSession</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>MainFilter</filter-name>
+        <url-pattern>/upload</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>MainFilter</filter-name>
+        <url-pattern>/findFiles</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>MainFilter</filter-name>
+        <url-pattern>/delete</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>MainFilter</filter-name>
+        <url-pattern>/searchByDate</url-pattern>
+    </filter-mapping>
+
+
+
+
+</web-app>
