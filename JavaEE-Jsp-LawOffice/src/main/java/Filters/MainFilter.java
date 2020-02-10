@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/addCourtSession")
+@WebFilter
 public class MainFilter implements Filter {
 
     @Override
